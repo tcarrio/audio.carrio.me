@@ -12,6 +12,12 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script>
+			const w = window.location;
+			if(w.protocol !== 'https:' && w.protocol !== 'file:'){
+				w.replace(`https://${w.hostname}/${w.pathname}`);
+			}
+		</script>
 	</head>
 	<body>
 
